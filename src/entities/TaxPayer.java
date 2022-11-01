@@ -1,5 +1,7 @@
 package entities;
 
+import java.text.Format;
+
 public class TaxPayer {    //Contribuinte
 
     private double salaryIncome;      //salárioRenda
@@ -108,4 +110,14 @@ public class TaxPayer {    //Contribuinte
         return this.grossTax() - this.taxRebate();
     }
 
+
+
+    public String toString() {
+        return "Imposto bruto total: "
+                + String.format("%.2f\n", grossTax())
+                + "Abatimento: "
+                + String.format("%.2f\n", taxRebate())
+                + "Imposto devido: "
+                + String.format("%.2f\n", netTax());
+    }
 }

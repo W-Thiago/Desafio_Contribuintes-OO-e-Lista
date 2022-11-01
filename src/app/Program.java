@@ -38,14 +38,12 @@ public class Program {
             list.add(payer);
         }
 
-
         int i = 1;
         for (TaxPayer payer  : list) {
             System.out.printf("\nResumo do %dº. contribuinte:\n", i++);
-            System.out.printf("Imposto Bruto Total: %.2f\n", payer.grossTax());
-            System.out.printf("Abatimento: %.2f\n", payer.taxRebate());
-            System.out.printf("Imposto devido: %.2f\n", payer.netTax());
+            System.out.println(payer.toString());
         }
+
 
         sc.close();
 
